@@ -74,4 +74,4 @@ schema:
     share: bool
     ssl: bool
   i_like_to_be_pwned: bool?
-image: ghcr.io/hassio-addons/ftp/{arch}
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-ftp-{arch}

@@ -14,4 +14,4 @@ map:
 - media:rw
 ports:
   7878/tcp: 7878
-image: ghcr.io/hassio-addons/radarr
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-radarr

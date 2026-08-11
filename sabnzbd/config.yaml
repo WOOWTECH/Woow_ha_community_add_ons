@@ -16,4 +16,4 @@ map:
 - media:rw
 ports:
   8080/tcp: null
-image: ghcr.io/hassio-addons/sabnzbd
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-sabnzbd

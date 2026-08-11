@@ -1,0 +1,5 @@
+last_sync: 2026-08-11T12:03:00Z
+upstream_url: https://github.com/hassio-addons/repository
+upstream_branch: master
+upstream_commit: 28e2989d135584119ef3fa9660231fd737db1bf2
+mirror_image_prefix: ghcr.io/woowtech/ha-mirror-

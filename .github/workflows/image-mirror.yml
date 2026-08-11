@@ -1,0 +1,115 @@
+name: image-mirror
+
+# Nightly image sync: reads .mirror/image-map.json (produced by patch-image.py
+# during mirror-sync) and copies each upstream image (all arches, current
+# version + :latest) to ghcr.io/woowtech/ha-mirror-*.
+
+on:
+  schedule:
+    - cron: '47 4 * * *'
+  workflow_dispatch:
+    inputs:
+      only_addon_dir:
+        description: 'Optional: mirror only this addon dir (blank = all)'
+        required: false
+        default: ''
+
+concurrency:
+  group: image-mirror
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  mirror-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Install skopeo + jq
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y skopeo jq
+
+      - name: Login to GHCR
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | skopeo login ghcr.io \
+            --username "${{ github.actor }}" --password-stdin
+
+      - name: Read image map + iterate
+        env:
+          ONLY: ${{ github.event.inputs.only_addon_dir }}
+        run: |
+          set -euo pipefail
+          if [ ! -f .mirror/image-map.json ]; then
+            echo "::error::.mirror/image-map.json missing — run mirror-sync first"
+            exit 1
+          fi
+          fail=0
+          copied=0
+          skipped=0
+          # Enumerate addons
+          count=$(jq -r '.addons | length' .mirror/image-map.json)
+          echo "Addons in map: $count"
+          for i in $(seq 0 $((count - 1))); do
+            dir=$(jq -r ".addons[$i].dir"           .mirror/image-map.json)
+            up=$(jq  -r ".addons[$i].upstream_image" .mirror/image-map.json)
+            ver=$(jq -r ".addons[$i].version // \"\"" .mirror/image-map.json)
+            arches=$(jq -r ".addons[$i].arches | join(\" \")" .mirror/image-map.json)
+            new=$(jq  -r ".addons[$i].new_image"     .mirror/image-map.json)
+            # Filter
+            if [ -n "$ONLY" ] && [ "$dir" != "$ONLY" ]; then
+              continue
+            fi
+            if [ -z "$up" ] || [ "$up" = "null" ]; then
+              continue
+            fi
+            if [ -z "$ver" ] || [ "$ver" = "null" ]; then
+              echo "  ⚠ $dir: no version, will only tag :latest"
+              ver=""
+            fi
+            echo "----"
+            echo "  $dir"
+            echo "  upstream: $up  version=$ver  arches=$arches"
+            echo "  mirror:   $new"
+            for arch in $arches; do
+              # HA supports two image patterns:
+              #   1. `image: foo/{arch}`  → substitute {arch}
+              #   2. `image: foo`          → append -{arch}
+              if [[ "$up" == *"{arch}"* ]]; then
+                src_base="${up//\{arch\}/$arch}"
+                dst_base="${new//\{arch\}/$arch}"
+              else
+                src_base="${up}-${arch}"
+                dst_base="${new}-${arch}"
+              fi
+              # version tag
+              if [ -n "$ver" ]; then
+                if skopeo copy --all --retry-times 3 \
+                    "docker://${src_base}:${ver}" \
+                    "docker://${dst_base}:${ver}"; then
+                  copied=$((copied + 1))
+                else
+                  echo "::warning::copy failed: $src_base:$ver"
+                  fail=$((fail + 1))
+                fi
+              fi
+              # latest tag (may not exist upstream — non-fatal)
+              if skopeo copy --all --retry-times 3 \
+                  "docker://${src_base}:latest" \
+                  "docker://${dst_base}:latest"; then
+                copied=$((copied + 1))
+              else
+                echo "::warning::copy failed: $src_base:latest (may not exist upstream)"
+                skipped=$((skipped + 1))
+              fi
+            done
+          done
+          echo "----"
+          echo "Copied=$copied  Skipped=$skipped  Failed=$fail"
+          exit $fail

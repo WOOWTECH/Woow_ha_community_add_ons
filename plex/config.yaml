@@ -51,4 +51,4 @@ options:
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   claim_code: str
-image: ghcr.io/hassio-addons/plex
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-plex

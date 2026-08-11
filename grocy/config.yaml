@@ -93,4 +93,4 @@ schema:
   certfile: str
   keyfile: str
   grocy_ingress_user: str
-image: ghcr.io/hassio-addons/grocy
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-grocy

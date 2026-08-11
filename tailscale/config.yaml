@@ -91,4 +91,4 @@ schema:
     ssl: bool
   taildrop: bool
   userspace_networking: bool
-image: ghcr.io/hassio-addons/tailscale
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-tailscale

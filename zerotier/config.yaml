@@ -29,4 +29,4 @@ schema:
   - str
   api_auth_token: str
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
-image: ghcr.io/hassio-addons/zerotier
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-zerotier

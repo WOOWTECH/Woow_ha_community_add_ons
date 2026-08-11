@@ -14,4 +14,4 @@ map:
 - media:rw
 ports:
   8989/tcp: 8989
-image: ghcr.io/hassio-addons/sonarr
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-sonarr

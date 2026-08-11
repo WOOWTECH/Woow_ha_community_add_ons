@@ -1,0 +1,571 @@
+{
+  "upstream_url": "https://github.com/hassio-addons/repository",
+  "upstream_branch": "master",
+  "mirror_image_prefix": "ghcr.io/woowtech/ha-mirror-",
+  "addons": [
+    {
+      "dir": "adguard",
+      "slug": "adguard",
+      "name": "AdGuard Home",
+      "upstream_image": "ghcr.io/hassio-addons/adguard",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-adguard",
+      "version": "6.2.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "aircast",
+      "slug": "aircast",
+      "name": "AirCast",
+      "upstream_image": "ghcr.io/hassio-addons/aircast",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-aircast",
+      "version": "5.1.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "airsonos",
+      "slug": "airsonos",
+      "name": "AirSonos",
+      "upstream_image": "ghcr.io/hassio-addons/airsonos",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-airsonos",
+      "version": "5.1.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "appdaemon",
+      "slug": "appdaemon",
+      "name": "AppDaemon",
+      "upstream_image": "ghcr.io/hassio-addons/appdaemon",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-appdaemon",
+      "version": "0.18.5",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "bazarr",
+      "slug": "bazarr",
+      "name": "Bazarr",
+      "upstream_image": "ghcr.io/hassio-addons/bazarr/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-bazarr-{arch}",
+      "version": "0.6.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "bitwarden",
+      "slug": "bitwarden",
+      "name": "Vaultwarden",
+      "upstream_image": "ghcr.io/hassio-addons/bitwarden",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-bitwarden",
+      "version": "0.27.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "bookstack",
+      "slug": "bookstack",
+      "name": "Bookstack",
+      "upstream_image": "ghcr.io/hassio-addons/bookstack/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-bookstack-{arch}",
+      "version": "4.0.2",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "chrony",
+      "slug": "chrony",
+      "name": "chrony",
+      "upstream_image": "ghcr.io/hassio-addons/chrony/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-chrony-{arch}",
+      "version": "6.0.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "emqx",
+      "slug": "emqx",
+      "name": "EMQX",
+      "upstream_image": "ghcr.io/hassio-addons/emqx/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-emqx-{arch}",
+      "version": "0.8.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "example",
+      "slug": "example",
+      "name": "Example",
+      "upstream_image": "ghcr.io/hassio-addons/example",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-example",
+      "version": "14.0.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "foldingathome",
+      "slug": "foldingathome",
+      "name": "Folding@home",
+      "upstream_image": "ghcr.io/hassio-addons/foldingathome/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-foldingathome-{arch}",
+      "version": "0.7.2",
+      "arches": [
+        "amd64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "ftp",
+      "slug": "ftp",
+      "name": "FTP",
+      "upstream_image": "ghcr.io/hassio-addons/ftp/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-ftp-{arch}",
+      "version": "6.0.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "glances",
+      "slug": "glances",
+      "name": "Glances",
+      "upstream_image": "ghcr.io/hassio-addons/glances",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-glances",
+      "version": "0.22.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "grafana",
+      "slug": "grafana",
+      "name": "Grafana",
+      "upstream_image": "ghcr.io/hassio-addons/grafana/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-grafana-{arch}",
+      "version": "12.1.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "grocy",
+      "slug": "grocy",
+      "name": "Grocy",
+      "upstream_image": "ghcr.io/hassio-addons/grocy",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-grocy",
+      "version": "0.25.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "influxdb",
+      "slug": "influxdb",
+      "name": "InfluxDB",
+      "upstream_image": "ghcr.io/hassio-addons/influxdb/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-influxdb-{arch}",
+      "version": "5.0.2",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "jupyterlab",
+      "slug": "jupyterlablite",
+      "name": "JupyterLab",
+      "upstream_image": "ghcr.io/hassio-addons/jupyterlab/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-jupyterlab-{arch}",
+      "version": "0.17.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "lidarr",
+      "slug": "lidarr",
+      "name": "Lidarr",
+      "upstream_image": "ghcr.io/hassio-addons/lidarr/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-lidarr-{arch}",
+      "version": "0.15.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "log-viewer",
+      "slug": "logviewer",
+      "name": "Log Viewer",
+      "upstream_image": "ghcr.io/hassio-addons/log-viewer/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-log-viewer-{arch}",
+      "version": "0.17.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "motioneye",
+      "slug": "motioneye",
+      "name": "motionEye",
+      "upstream_image": "ghcr.io/hassio-addons/motioneye/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-motioneye-{arch}",
+      "version": "0.23.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "mqtt-io",
+      "slug": "mqtt-io",
+      "name": "MQTT IO",
+      "upstream_image": "ghcr.io/hassio-addons/mqtt-io/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-mqtt-io-{arch}",
+      "version": "0.4.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "nginxproxymanager",
+      "slug": "nginxproxymanager",
+      "name": "Nginx Proxy Manager",
+      "upstream_image": "ghcr.io/hassio-addons/nginxproxymanager/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-nginxproxymanager-{arch}",
+      "version": "2.1.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "node-red",
+      "slug": "nodered",
+      "name": "Node-RED",
+      "upstream_image": "ghcr.io/hassio-addons/node-red",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-node-red",
+      "version": "22.0.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "nut",
+      "slug": "nut",
+      "name": "Network UPS Tools",
+      "upstream_image": "ghcr.io/hassio-addons/nut",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-nut",
+      "version": "0.18.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "overseerr",
+      "slug": "overseerr",
+      "name": "Overseerr",
+      "upstream_image": "ghcr.io/hassio-addons/overseerr/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-overseerr-{arch}",
+      "version": "0.1.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "phpmyadmin",
+      "slug": "phpmyadmin",
+      "name": "phpMyAdmin",
+      "upstream_image": "ghcr.io/hassio-addons/phpmyadmin/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-phpmyadmin-{arch}",
+      "version": "0.13.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "plex",
+      "slug": "plex",
+      "name": "Plex Media Server",
+      "upstream_image": "ghcr.io/hassio-addons/plex",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-plex",
+      "version": "4.1.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "prowlarr",
+      "slug": "prowlarr",
+      "name": "Prowlarr",
+      "upstream_image": "ghcr.io/hassio-addons/prowlarr/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-prowlarr-{arch}",
+      "version": "0.27.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "radarr",
+      "slug": "radarr",
+      "name": "Radarr",
+      "upstream_image": "ghcr.io/hassio-addons/radarr",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-radarr",
+      "version": "0.30.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "sabnzbd",
+      "slug": "sabnzbd",
+      "name": "SABnzbd",
+      "upstream_image": "ghcr.io/hassio-addons/sabnzbd",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-sabnzbd",
+      "version": "0.8.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "sonarr",
+      "slug": "sonarr",
+      "name": "Sonarr",
+      "upstream_image": "ghcr.io/hassio-addons/sonarr",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-sonarr",
+      "version": "0.5.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "spotify",
+      "slug": "spotify",
+      "name": "Spotify Connect",
+      "upstream_image": "ghcr.io/hassio-addons/spotify/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-spotify-{arch}",
+      "version": "0.18.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "sqlite-web",
+      "slug": "sqlite-web",
+      "name": "SQLite Web",
+      "upstream_image": "ghcr.io/hassio-addons/sqlite-web",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-sqlite-web",
+      "version": "6.0.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "ssh",
+      "slug": "ssh",
+      "name": "Advanced SSH & Web Terminal",
+      "upstream_image": "ghcr.io/hassio-addons/ssh",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-ssh",
+      "version": "24.0.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "tailscale",
+      "slug": "tailscale",
+      "name": "Tailscale",
+      "upstream_image": "ghcr.io/hassio-addons/tailscale",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-tailscale",
+      "version": "0.28.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "tasmoadmin",
+      "slug": "sonweb",
+      "name": "TasmoAdmin",
+      "upstream_image": "ghcr.io/hassio-addons/tasmoadmin/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-tasmoadmin-{arch}",
+      "version": "0.33.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "tautulli",
+      "slug": "tautulli",
+      "name": "Tautulli",
+      "upstream_image": "ghcr.io/hassio-addons/tautulli/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-tautulli-{arch}",
+      "version": "5.0.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "thelounge",
+      "slug": "thelounge",
+      "name": "The Lounge",
+      "upstream_image": "ghcr.io/hassio-addons/thelounge/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-thelounge-{arch}",
+      "version": "0.22.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "tor",
+      "slug": "tor",
+      "name": "Tor",
+      "upstream_image": "ghcr.io/hassio-addons/tor",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-tor",
+      "version": "8.0.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "traccar",
+      "slug": "traccar",
+      "name": "Traccar",
+      "upstream_image": "ghcr.io/hassio-addons/traccar/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-traccar-{arch}",
+      "version": "0.25.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "unifi",
+      "slug": "unifi",
+      "name": "UniFi Network Application",
+      "upstream_image": "ghcr.io/hassio-addons/unifi",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-unifi",
+      "version": "5.1.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "uptime-kuma",
+      "slug": "uptime-kuma",
+      "name": "Uptime Kuma",
+      "upstream_image": "ghcr.io/hassio-addons/uptime-kuma",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-uptime-kuma",
+      "version": "0.18.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "vscode",
+      "slug": "vscode",
+      "name": "Studio Code Server",
+      "upstream_image": "ghcr.io/hassio-addons/vscode/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-vscode-{arch}",
+      "version": "6.0.1",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "whisparr",
+      "slug": "whisparr",
+      "name": "Whisparr",
+      "upstream_image": "ghcr.io/hassio-addons/whisparr/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-whisparr-{arch}",
+      "version": "0.5.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "wireguard",
+      "slug": "wireguard",
+      "name": "WireGuard",
+      "upstream_image": "ghcr.io/hassio-addons/wireguard/{arch}",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-wireguard-{arch}",
+      "version": "0.13.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "zerotier",
+      "slug": "zerotier",
+      "name": "ZeroTier One",
+      "upstream_image": "ghcr.io/hassio-addons/zerotier",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-zerotier",
+      "version": "0.26.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    },
+    {
+      "dir": "zwave-js-ui",
+      "slug": "zwavejs2mqtt",
+      "name": "Z-Wave JS UI",
+      "upstream_image": "ghcr.io/hassio-addons/zwave-js-ui",
+      "new_image": "ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-zwave-js-ui",
+      "version": "7.4.0",
+      "arches": [
+        "aarch64"
+      ],
+      "already_patched": false
+    }
+  ]
+}

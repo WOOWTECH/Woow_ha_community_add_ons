@@ -36,4 +36,4 @@ schema:
   envvars:
   - name: str
     value: str
-image: ghcr.io/hassio-addons/bookstack/{arch}
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-bookstack-{arch}

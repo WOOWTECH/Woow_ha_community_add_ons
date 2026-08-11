@@ -29,4 +29,4 @@ schema:
   ntp_server:
   - str?
   mode: list(pool|server)
-image: ghcr.io/hassio-addons/chrony/{arch}
+image: ghcr.io/woowtech/ha-mirror-ghcr-io-hassio-addons-chrony-{arch}
